@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<title> Facetime </title>
+
+<style>
+
+/* mobile layout */
+.container{
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-rows: minmax(100px,1fr);
+}
+
+.title{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: blue;
+	}
+#step{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	}
+#step1{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	}
+#level2{
+	opacity: 1.0;
+	}
+
+@media (hover) and (min-width: 600px){
+	/* desktop color with small window */
+	.container {
+		grid-template-columns: auto auto;
+		grid-template-rows: 100px;
+	}
+}
+
+@media (hover) and (min-width: 900px){
+	/* desktop color with big window */
+	.container {
+		grid-template-columns: auto auto auto auto;
+		grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+	}
+
+}
+.container div:nth-child(odd){
+	background-color: grey;
+}
+.container div:nth-child(even){
+	background-color: lightgrey;
+}
+
+.container{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+
+}
+
+
+/* .step:hover #replace {
+ display: block;
+}
+
+.step #replace {
+font-size: 100%;
+display: none;
+color:white;
+justify-content: center;
+align-items: center;
+background-color: white;
+width: 50px;
+height: 50px;
+left: 200px;
+top: 100px;
+}
+*/
+
+/* div:hover{
+	color: blue;
+	background-color: #bfd38b; 
+*/
+
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0; 
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white; /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+
+/*	class,overlay, mouse over sth happens, overlay everyhting,, just turn on 1
+*/
+
+#step1:hover .container  #level1 {
+  opacity: 0.0;
+}
+
+</style>
+
+<body>
+
+
+	<div id="level2" class="container">
+
+		<div class= "title">How</div>
+		<div class= "title">To</div>
+		<div class= "title">Wish</div>
+		<div class= "title">Your</div>
+		<div class= "title">Friend</div>
+		<div class= "title">A</div>
+		<div class= "title">Happy</div>
+		<div class= "title">Birthday</div>
+
+		<div id= "step1">start</div>
+		<div id= "step">enter</div>
+		<div id= "step">new</div>
+		<div id= "step">select</div>
+		<div id= "step">call</div>
+		<div id= "step">wait</div>
+		<div id= "step">greet</div>
+		<div id= "step">effects</div>
+		<div id= "step">text</div>
+		<div id= "step">resize</div>
+		<div id= "step">again</div>
+		<div id= "step">emoji</div>
+		<div id= "step">birthday</div>
+		<div id= "step">place</div>
+		<div id= "step">chat</div>
+		<div id= "step">hangup</div>
+
+		<div class= "title">How</div>
+		<div class= "title">To</div>
+		<div class= "title">Wish</div>
+		<div class= "title">Your</div>
+		<div class= "title">Friend</div>
+		<div class= "title">A</div>
+		<div class= "title">Happy</div>
+		<div class= "title">Birthday</div>
+		
+	</div>
+
+
+
+</body>

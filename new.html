@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<title> Facetime </title>
+
+<style>
+
+/* mobile layout */
+.container{
+	display: grid;
+	grid-template-columns: auto;
+	grid-auto-rows: minmax(100px,1fr);
+}
+
+.title{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: blue;
+	}
+#step2{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	opacity: 1.0;
+	}
+#step1{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	opacity: 1.0;
+	}
+#step{
+	font-size: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: black;
+	opacity: 1.0;
+	}
+#level2{
+	opacity: 1.0;
+	}
+
+@media (hover) and (min-width: 600px){
+	/* desktop color with small window */
+	.container {
+		grid-template-columns: auto auto;
+		grid-template-rows: 100px;
+	}
+}
+
+@media (hover) and (min-width: 900px){
+	/* desktop color with big window */
+	.container {
+		grid-template-columns: auto auto auto auto auto auto auto auto;
+		grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+	}
+
+}
+.container div:nth-child(odd){
+	background-color: grey;
+}
+.container div:nth-child(even){
+	background-color: lightgrey;
+}
+
+.container{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+}
+
+#step1:hover #step2 {
+  opacity: 0.0;
+}
+
+</style>
+
+<body>
+
+
+	<div id="level2" class="container">
+
+		<div class= "title">How</div>
+		<div class= "title">To</div>
+		<div class= "title">Wish</div>
+		<div class= "title">Your</div>
+		<div class= "title">Friend</div>
+		<div class= "title">A</div>
+		<div class= "title">Happy</div>
+		<div class= "title">Birthday</div>
+
+		<div id= "step1">start</div>
+		<div id= "step2">enter</div>
+		<div id= "step">new</div>
+		<div id= "step">select</div>
+		<div id= "step">call</div>
+		<div id= "step">wait</div>
+		<div id= "step">greet</div>
+		<div id= "step">effects</div>
+		<div id= "step">text</div>
+		<div id= "step">resize</div>
+		<div id= "step">again</div>
+		<div id= "step">emoji</div>
+		<div id= "step">birthday</div>
+		<div id= "step">place</div>
+		<div id= "step">chat</div>
+		<div id= "step">hangup</div>
+
+		<div class= "title">How</div>
+		<div class= "title">To</div>
+		<div class= "title">Wish</div>
+		<div class= "title">Your</div>
+		<div class= "title">Friend</div>
+		<div class= "title">A</div>
+		<div class= "title">Happy</div>
+		<div class= "title">Birthday</div>
+		
+	</div>
+</body>
