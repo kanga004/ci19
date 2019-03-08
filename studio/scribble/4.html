@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+	</title>
+</head>
+
+<style>
+#pirateship {position:absolute; top:420px;width:100%; height:160px;
+background-image:url(pirateship.png); background-position:-200px;
+background-repeat: no-repeat;}
+.sail {animation: sailing 8s infinite linear;}
+@keyframes sailing {
+  100% {
+    background: red;
+  }
+}
+</style>
+
+<body>
+
+<script>
+
+if (window.addEventListener) {
+  var state = 0,
+    Konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+  window.addEventListener("keydown", function(e) {
+    if (e.keyCode == Konami[state]) state++;
+    else state = 0;
+    if (state == 10)
+      $('#pirateship').addClass('sail');
+    window.alert("test");
+  }, true);
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="pirateship">arr</div>
+</body>
+</html>
