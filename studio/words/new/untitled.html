@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style >
+body{
+	margin: 0;
+}
+
+
+div{
+	position: absolute;
+	font-size: 30px;
+	color: red ;
+	font-weight: bold;
+	font-family: sans-serif;
+	-webkit-text-stroke-width: 1px;
+  	-webkit-text-stroke-color: black;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<script>
+var url = "https://raw.githubusercontent.com/dariusk/corpora/master/data/geography/us_cities.json";
+fetch(url)
+	.then(function(data){return data.json();})
+	.then(function(json){sortData(json);})
+
+var balls = [];
+
+function sortData(json) {
+	for(var i = 0; i < json.length; i+=1){
+		var ball = document.createElement("div");
+		document.body.appendChild(ball);
+		ball.x = 0;
+		ball.y = 0;
+		ball.width = 50;//bounds.width;
+		ball.height = 50;//bounds.height;
+		ball.speed = 4;
+		ball.xChange = speed;
+		ball.yChange = speed;
+		ball.innerHTML = json[i].
+		balls.push(ball);
+
+	}
+}
+
+//var bounds = document.getElementById("ball").
+//	getBoundingClientRect()
+	
+function gameLoop (){
+	for(var i = 0; i < balls.length; i++) {
+		balls[i].x = balls[i].x + balls[i].xChange;
+        balls[i].style.top = balls[i].y + "px";
+		//balls[i].y = balls[i].y + balls[i].yChange;
+
+		if(balls[i].x > window.innerWidth - balls[i].width){
+			balls[i].xChange = -speed * Math.random();
+		}
+		if(balls[i].x < 0){
+			balls[i].xChange = speed * Math.random();
+		}
+		if(balls[i].y > window.innerHeight - balls[i].height){
+			balls[i].yChange = -speed * Math.random();
+		}
+		if(balls[i].y < 0){
+			balls[i].yChange = speed * Math.random();
+		}
+
+	}
+}
+	// erase everything below
+//	x = x + xChange;
+//	y = y + yChange;
+
+//	document.getElementById("ball").
+//		style.top = y + "px";
+//	document.getElementById("ball").
+//		style.left = x + "px";
+//	if(x > window.innerWidth - width){
+//		xChange = -speed * Math.random();
+//	}
+//	if(x < 0){
+//		xChange = speed * Math.random();
+//	}
+//	if(y > window.innerHeight - height){
+//		yChange = -speed * Math.random();
+//	}
+//	if(y < 0){
+//		yChange = speed * Math.random();
+//	}
+//}
+
+
+//document.get.ElementById("ball").style.top = 
+
+// here is how you run a fuction
+//gameLoop();
+//5000 : 5 seconds
+// 1000/60 - 60 times a second
+// here is how you run a fuction on a loop infinate times 
+setInterval (gameLoop, 1000 / 60);
+
+
+
+
+</script>
+
+
+</body>
+</html>
