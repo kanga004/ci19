@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+<style >
+body{
+	margin: 0;
+}
+
+
+div{
+	position: absolute;
+	font-size: 30px;
+	color: red ;
+	font-weight: bold;
+	font-family: sans-serif;
+	-webkit-text-stroke-width: 1px;
+  	-webkit-text-stroke-color: black;
+}
+
+</style>
+
+</head>
+<body>
+
+
+<script>
+var url = "https://raw.githubusercontent.com/dariusk/corpora/master/data/geography/us_cities.json";
+fetch(url)
+	.then(function(data){return data.json();})
+	.then(function(json){sortData(json);})
+
+var ball = [
+    {
+        "word": "who",
+        "level": 14,
+        "sentence": "who is this"
+    },
+    {
+        "word": "what",
+        "level": 35,
+        "sentence": "what is this"
+    },
+    {
+        "word": "where",
+        "level": 12,
+        "sentence": "where we going"
+    },
+    {
+        "word": "when",
+        "level": 4,
+        "sentence": "when did you get here"
+    },
+    {
+        "word": "why",
+        "level": 73,
+        "sentence": "why are you here"
+    },
+    {
+        "word": "how",
+        "level": 92,
+        "sentence": "how did you get here"
+    },
+    {
+        "word": "i",
+        "level": 25,
+        "sentence": "i am cold"
+    },
+    {
+        "word": "am",
+        "level": 45,
+        "sentence": "i am cold"
+    },
+    {
+        "word": "avery",
+        "level": 33,
+        "sentence": "my name is avery"
+    },
+    {
+        "word": "it ",
+        "level": 17,
+        "sentence": "it is cold"
+    },
+    {
+        "word": "is",
+        "level": 19,
+        "sentence": "is it tho"
+    },
+    {
+        "word": "spring",
+        "level": 27,
+        "sentence": "spring back into it"
+    },
+    {
+        "word": "break",
+        "level": 37,
+        "sentence": "break my back"
+    }
+];
+
+function sortData(json) {
+	for(var i = 0; i < json.length; i+=1){
+		var ball = document.createElement("div");
+		document.body.appendChild(ball);
+		ball.x = 0;
+		ball.y = 0;
+		ball.width = 50;//bounds.width;
+		ball.height = 50;//bounds.height;
+		ball.speed = 4;
+		ball.xChange = speed;
+		ball.yChange = speed;
+		ball.innerHTML = json[i].
+		balls.push(ball);
+
+	}
+}
+
+//var bounds = document.getElementById("ball").
+//	getBoundingClientRect()
+	
+function gameLoop (){
+	for(var i = 0; i < ball.length; i++) {
+		ball[i].x = ball[i].x + ball[i].xChange;
+		ball[i].style.top = ball[i].y + "px";
+		//ball[i].y = ball[i].y + ball[i].yChange;
+
+		if(ball[i].x > window.innerWidth - ball[i].width){
+			ball[i].xChange = -speed * Math.random();
+		}
+		if(ball[i].x < 0){
+			ball[i].xChange = speed * Math.random();
+		}
+		if(ball[i].y > window.innerHeight - ball[i].height){
+			ball[i].yChange = -speed * Math.random();
+		}
+		if(ball[i].y < 0){
+			ball[i].yChange = speed * Math.random();
+		}
+
+	}
+}
+	// erase everything below
+//	x = x + xChange;
+//	y = y + yChange;
+
+//	document.getElementById("ball").
+//		style.top = y + "px";
+//	document.getElementById("ball").
+//		style.left = x + "px";
+//	if(x > window.innerWidth - width){
+//		xChange = -speed * Math.random();
+//	}
+//	if(x < 0){
+//		xChange = speed * Math.random();
+//	}
+//	if(y > window.innerHeight - height){
+//		yChange = -speed * Math.random();
+//	}
+//	if(y < 0){
+//		yChange = speed * Math.random();
+//	}
+//}
+
+
+//document.get.ElementById("ball").style.top = 
+
+// here is how you run a fuction
+//gameLoop();
+//5000 : 5 seconds
+// 1000/60 - 60 times a second
+// here is how you run a fuction on a loop infinate times 
+setInterval (gameLoop, 1000 / 60);
+
+
+
+
+</script>
+
+
+</body>
+</html>
