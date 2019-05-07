@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style>
+
+html,body{ 
+	background: black;
+
+	
+}
+
+div{
+	font-family: times;
+	color: white ;
+	text-align: right;
+	font-weight: bold;
+	-webkit-text-stroke-width: 1px;
+  	-webkit-text-stroke-color: none;
+  	overflow-wrap: break-word;
+  	text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px blue;
+
+
+
+}
+
+.title1{
+	position: absolute;
+	font-size: 15pt;
+	animation: slide 8s linear infinite;
+}
+
+@keyframes slide {
+  0% {transform: translate(0vw,-20px);}
+  100% {transform: translate(0vw,110vh);}
+}
+
+.title2{
+	position: absolute;
+	font-size: 18pt;
+	animation: slide2 6s linear infinite;
+}
+
+@keyframes slide2 {
+  0% {transform: translate(6vw,-20px);}
+  100% {transform: translate(6vw,110vh);}
+}
+
+.title3{
+	position: absolute;
+	font-size: 13pt;
+	animation: slide3 12s linear infinite;
+}
+
+@keyframes slide3 {
+  0% {transform: translate(60vw,-50px);}
+  100% {transform: translate(60vw,110vh);}
+}
+
+.title4{
+	position: absolute;
+	font-size: 21pt;
+	animation: slide4 4s linear infinite;
+}
+
+@keyframes slide4 {
+  0% {transform: translate(23vw,-20px);}
+  100% {transform: translate(23vw,110vh);}
+}
+
+
+
+.title5{
+	position: absolute;
+	font-size: 13pt;
+	animation: slide5 11s linear infinite;
+}
+
+@keyframes slide5 {
+  0% {transform: translate(21vw,-10px);}
+  100% {transform: translate(21vw,120vh);}
+}
+
+.title6{
+	position: absolute;
+	font-size: 18pt;
+	animation: slide2 5s linear infinite;
+}
+
+@keyframes slide6 {
+  0% {transform: translate(32vw,-6px);}
+  100% {transform: translate(32vw,101vh);}
+}
+
+
+
+.title7{
+	position: absolute;
+	font-size: 13pt;
+	animation: slide6 10s linear infinite;
+}
+
+@keyframes slide7 {
+  0% {transform: translate(56vw,-20px);}
+  100% {transform: translate(56vw,140vh);}
+}
+
+
+
+.title8{
+	position: absolute;
+	font-size: 21pt;
+	animation: slide8 7s linear infinite;
+}
+
+@keyframes slide8 {
+  0% {transform: translate(1vw,-160px);}
+  100% {transform: translate(1vw,120vh);}
+}
+
+
+
+
+.title9{
+	position: absolute;
+	font-size: 23pt;
+	animation: slide9 9s linear infinite;
+}
+
+@keyframes slide9 {
+  0% {transform: translate(19vw,-200px);}
+  100% {transform: translate(19vw,120vh);}
+}
+
+.title0{
+	position: absolute;
+	font-size: 20pt;
+	animation: slide0 22s linear infinite;
+}
+
+@keyframes slide0 {
+  0% {transform: translate(55vw,-105px);}
+  100% {transform: translate(55vw,110vh);}
+}
+
+
+video{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  position: absolute;
+  top:50%;
+	left: 50%;
+	margin-top: -23%;
+	margin-left: -40%;
+
+}
+
+
+
+</style>
+<body>
+
+<video  autoplay loop muted controls >
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+</video>
+
+<script>
+
+var url = 'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=kardashian&api-key=FbTUCLGqqBA1bTkndhAgKKLzq95GoxiZ';
+
+function callAPI(){
+	console.log("call api");
+	fetch(url)
+	.then(function(event){ return event.json();	})
+	.then(function(json){ buildApp(json); })
+}
+
+function buildApp(json){
+	let stations = json.response.docs;
+
+	for (var i = 0; i<stations.length; i++){
+	//createElement('div', stations[i].headline.main);
+
+
+	let div = document.createElement("div");
+	div.className = 'title'+i;
+	div.innerHTML = stations[i].headline.main;
+	document.body.appendChild(div);
+
+	}
+}
+
+
+
+
+
+callAPI();
+
+</script>
+</body>
+</html>
