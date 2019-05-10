@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style>
+body{
+    display: grid;
+    grid-template-columns: auto auto 80vmin;
+    grid-template-rows: 50px; 
+}
+
+div:nth-child(odd){
+    background-color: WHITE;
+}
+div:nth-child(even){
+    background-color: WHITE;
+}
+
+.active {
+    display: block;
+}
+
+#change{ 
+    color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+div {
+    display: none;
+}
+
+div{
+        text-align: center;
+        color: black;
+        font-family: Helvetica;
+        font-size: 30px;
+        margin:  20px 20px 20px 95px;
+
+    }
+
+.bar{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    background-color: white;
+    color: black;
+    font-family: Helvetica;
+    font-size: 50px;
+    margin: 20PX;
+}
+
+
+
+</style>
+
+<body>
+
+<button id = "change">ALPHABET <-> FREQUENCY</button>
+<div class="bar">ALL WORDS SPOKEN 03/21/19</div>
+<div class="bar">BY FREQUENCY</div>
+<div class="bar">total: 4244 </div>
+<div class="bar"> </div>
+<div class="bar"> </div>
+
+<div class="active">ALL WORDS SPOKEN 03/21/19</div>
+<div class="active">BY ALPHABETICAL ORDER</div>
+<div class = "active" >total: 4244</div>
+<div class = "active">Times Said</div>
+<div class = "active"> Word Used</div>
+<div class = "active"> Notable Quotes</div>
+<div class = "active">147 </div>
+<div class = "active">i</div>
+<div class = "active">NONE</div>
+<div class = "active">105</div>
+<div class = "active">it</div>
+<div class = "active">NONE</div>
+
+<div>Times Said</div>
+<div> Word Used</div>
+<div> Notable Quotes</div>
+<div>147 </div>
+<div>i</div>
+<div>NONE</div>
+<div>105</div>
+<div>it</div>
+<div>"if this (jello) turns out wrong we can throw it at people"</div>
+<div>103</div>
+<div>the</div>
+<div>NONE</div>
+<div>91</div>
+<div>a</div>
+<div>NONE</div>
+<div>88</div>
+<div>oh</div>
+<div>NONE</div>
+<div>85</div>
+<div>like</div>
+<div>NONE</div>
+<div>84</div>
+<div>you</div>
+<div>NONE</div>
+<div>82</div>
+<div>is</div>
+<div>NONE</div>
+<div>72</div>
+<div>just</div>
+<div>NONE</div>
+<div>67</div>
+<div>that</div>
+<div>NONE</div>
+<div>66</div>
+<div>to</div>
+<div>NONE</div>
+<div>54</div>
+<div>so</div>
+<div>NONE</div>
+<div>52</div>
+<div>and</div>
+<div>NONE</div>
+<div>50</div>
+<div>what</div>
+<div>NONE</div>
+<div>49</div>
+<div>this</div>
+<div>NONE</div>
+
+
+
+
+
+
+
+<script type="text/javascript" 
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$('#change').on('click', function() { 
+    $('div').each(function() { 
+        if($(this).hasClass('active')) { 
+            $(this).removeClass('active');
+        } else { 
+            $(this).addClass('active');
+        }
+    });
+    });
+
+</script>
+
+</body>
+</html>
