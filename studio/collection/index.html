@@ -114,7 +114,7 @@ fetch(url)
 	.then(function(json){sortData(json);})
 
 var balls = [];
-var speed = 0;
+var speed = [];
 
 function sortData(json) {
 	for(var i = 0; i < json.length; i+=1){
@@ -141,13 +141,15 @@ function sortData(json) {
 		sentence.style = "z-index: 20";
 
 		
+		//speed.innerHTML = json[i].humiliation;
+
 
 		ball.x = 0;
 		ball.y = 0;
 		ball.width = 50;//bounds.width;
 		ball.height = 50;//bounds.height;
-		ball.speed = Math.random()*5;
-		ball.xChange = ball.speed+ Math.random();
+		ball.speed = json[i].humiliation/2;
+		ball.xChange = ball.speed+Math.random();
 		ball.yChange = ball.speed+Math.random();
 		ball.innerHTML = json[i].word;
 
