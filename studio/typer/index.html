@@ -19,8 +19,8 @@
   	background-size: cover;
   	position: relative;
 	display: grid;
-	grid-template-columns: auto auto auto auto auto auto auto auto auto ;
-	grid-template-rows: 20vmin 20vmin 20vmin 20vmin 20vmin ; 
+	grid-template-columns: auto auto auto auto auto auto auto auto auto;
+	grid-template-rows: 25vmin 25vmin 25vmin 25vmin ; 
 
 	}
 	div {
@@ -49,42 +49,34 @@ height:100%;	}​
 <div id="picSeven"><img src="7.jpg" ></div>
 <div id="picEight"><img src="8.jpg" ></div>
 <div id="picNine"><img src="9.jpg" ></div>
-<div id="picTen"><img src="11.jpg" ></div>
-<div id="pic1ten"><img src="12.jpg" ></div>
-<div id="pic2ten"><img src="13.jpg" ></div>
-<div id="pic3ten"><img src="14.jpg" ></div>
-<div id="pic4ten"><img src="15.jpg" ></div>
-<div id="pic5ten"><img src="16.jpg" ></div>
-<div id="pic6ten"><img src="17.jpg" ></div>
-<div id="pic7ten"><img src="18.jpg" ></div>
-<div id="pic8ten"><img src="19.jpg" ></div>
-<div id="pic9ten"><img src="21.jpg" ></div>
-<div id="pic2ten0"><img src="22.jpg" ></div>
-<div id="pic2ten1"><img src="23.jpg" ></div>
-<div id="pic2ten2"><img src="24.jpg" ></div>
-<div id="pic2ten3"><img src="26.jpg" ></div>
-<div id="pic2ten4"><img src="27.jpg" ></div>
-<div id="pic2ten5"><img src="28.jpg" ></div>
-<div id="pic2ten6"><img src="29.jpg" ></div>
-<div id="pic111"><img src="30.jpg" ></div>
-<div id="pic222"><img src="32.jpg" ></div>
-<div id="pic333"><img src="33.jpg" ></div>
-<div id="pic444"><img src="34.jpg" ></div>
-<div id="pic555"><img src="35.jpg" ></div>
-<div id="pic666"><img src="36.jpg" ></div>
-<div id="pic777"><img src="37.jpg" ></div>
-<div id="pic888"><img src="38.jpg" ></div>
-<div id="pic999"><img src="39.jpg" ></div>
-<div id="pic000"><img src="40.jpg" ></div>
-<div id="pic1111"><img src="42.jpg" ></div>
-<div id="pic2222"><img src="43.jpg" ></div>
-<div id="pic3333"><img src="44.jpg" ></div>
-<div id="pic4444"><img src="45.jpg" ></div>
-<div id="pic6666"><img src="46.jpg" ></div>
-<div id="pic7777"><img src="47.jpg" ></div>
-<div id="pic8888"><img src="48.jpg" ></div>
-<div id="pic9999"><img src="49.jpg" ></div>
-<div id="pic0000"><img src="50.jpg" ></div>
+<div id="picTen"><img src="10.jpg" ></div>
+<div id="pic1ten"><img src="11.jpg" ></div>
+<div id="pic2ten"><img src="12.jpg" ></div>
+<div id="pic3ten"><img src="13.jpg" ></div>
+<div id="pic4ten"><img src="14.jpg" ></div>
+<div id="pic5ten"><img src="15.jpg" ></div>
+<div id="pic6ten"><img src="16.jpg" ></div>
+<div id="pic7ten"><img src="17.jpg" ></div>
+<div id="pic8ten"><img src="18.jpg" ></div>
+<div id="pic9ten"><img src="19.jpg" ></div>
+<div id="pic2ten0"><img src="20.jpg" ></div>
+<div id="pic2ten1"><img src="21.jpg" ></div>
+<div id="pic2ten2"><img src="22.jpg" ></div>
+<div id="pic2ten3"><img src="23.jpg" ></div>
+<div id="pic2ten4"><img src="24.jpg" ></div>
+<div id="pic2ten5"><img src="25.jpg" ></div>
+<div id="pic2ten6"><img src="26.jpg" ></div>
+<div id="pic111"><img src="27.jpg" ></div>
+<div id="pic222"><img src="28.jpg" ></div>
+<div id="pic333"><img src="29.jpg" ></div>
+<div id="pic444"><img src="30.jpg" ></div>
+<div id="pic555"><img src="31.jpg" ></div>
+<div id="pic666"><img src="32.jpg" ></div>
+<div id="pic777"><img src="33.jpg" ></div>
+<div id="pic888"><img src="34.jpg" ></div>
+<div id="pic999"><img src="35.jpg" ></div>
+<div id="pic000"><img src="36.jpg" ></div>
+
 
 
 
@@ -93,8 +85,8 @@ height:100%;	}​
 
 
 <script>
-	var speed = 0.01;
-	var duration = 10;
+	var speed = 0.005;
+	var duration = 15;
 
 	document.getElementById("picOne").style.opacity = 1.0;
 	var myopacity = 1;
@@ -971,10 +963,6 @@ height:100%;	}​
 		} 
 	}
 
-
-
-
-
 	document.getElementById("pic777").style.opacity = 1.0;
 	var myopacity = 1;
 
@@ -1087,314 +1075,51 @@ height:100%;	}​
 
 
 
-	document.getElementById("pic1111").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut1111 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic1111").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic1111').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut1111();},duration);
-		} else {
-			setTimeout(function(){fadeIn1111();},duration);
-		}
-	}
-	var fadeIn1111 = function() {
-		var current = parseFloat(document.getElementById("pic1111").style.opacity);
-		current = current + speed;
-		document.getElementById('pic1111').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn1111();},1);
-		} 
-	}
-
-
-
-
-	document.getElementById("pic2222").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut2222 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic2222").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic2222').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut2222();},duration);
-		} else {
-			setTimeout(function(){fadeIn2222();},duration);
-		}
-	}
-	var fadeIn2222 = function() {
-		var current = parseFloat(document.getElementById("pic2222").style.opacity);
-		current = current + speed;
-		document.getElementById('pic2222').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn2222();},1);
-		} 
-	}
-
-
-
-
-	document.getElementById("pic3333").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut3333 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic3333").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic3333').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut3333();},duration);
-		} else {
-			setTimeout(function(){fadeIn3333();},duration);
-		}
-	}
-	var fadeIn3333 = function() {
-		var current = parseFloat(document.getElementById("pic3333").style.opacity);
-		current = current + speed;
-		document.getElementById('pic3333').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn3333();},1);
-		} 
-	}
-
-
-
-
-
-	document.getElementById("pic4444").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut4444 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic4444").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic4444').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut4444();},duration);
-		} else {
-			setTimeout(function(){fadeIn4444();},duration);
-		}
-	}
-	var fadeIn4444 = function() {
-		var current = parseFloat(document.getElementById("pic4444").style.opacity);
-		current = current + speed;
-		document.getElementById('pic4444').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn4444();},1);
-		} 
-	}
-
-
-
-
-
-	document.getElementById("pic6666").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut6666 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic6666").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic6666').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut6666();},duration);
-		} else {
-			setTimeout(function(){fadeIn6666();},duration);
-		}
-	}
-	var fadeIn6666 = function() {
-		var current = parseFloat(document.getElementById("pic6666").style.opacity);
-		current = current + speed;
-		document.getElementById('pic6666').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn6666();},1);
-		} 
-	}
-
-
-
-
-
-	document.getElementById("pic7777").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut7777 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic7777").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic7777').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut7777();},duration);
-		} else {
-			setTimeout(function(){fadeIn7777();},duration);
-		}
-	}
-	var fadeIn7777 = function() {
-		var current = parseFloat(document.getElementById("pic7777").style.opacity);
-		current = current + speed;
-		document.getElementById('pic7777').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn7777();},1);
-		} 
-	}
-
-
-
-
-
-	document.getElementById("pic8888").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut8888 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic8888").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic8888').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut8888();},duration);
-		} else {
-			setTimeout(function(){fadeIn8888();},duration);
-		}
-	}
-	var fadeIn8888 = function() {
-		var current = parseFloat(document.getElementById("pic8888").style.opacity);
-		current = current + speed;
-		document.getElementById('pic8888').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn8888();},1);
-		} 
-	}
-
-
-
-
-	document.getElementById("pic9999").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut9999 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic9999").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic9999').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut9999();},duration);
-		} else {
-			setTimeout(function(){fadeIn9999();},duration);
-		}
-	}
-	var fadeIn9999 = function() {
-		var current = parseFloat(document.getElementById("pic9999").style.opacity);
-		current = current + speed;
-		document.getElementById('pic9999').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn9999();},1);
-		} 
-	}
-
-
-
-
-	document.getElementById("pic0000").style.opacity = 1.0;
-	var myopacity = 1;
-
-	var fadeOut0000 = function() {
-		console.log("fade out");
-		var current = parseFloat(document.getElementById("pic0000").style.opacity);
-		console.log(current)
-		current = current - speed;
-		document.getElementById('pic0000').style.opacity = current;
-		if (current > 0) {
-			setTimeout(function(){fadeOut0000();},duration);
-		} else {
-			setTimeout(function(){fadeIn0000();},duration);
-		}
-	}
-	var fadeIn0000 = function() {
-		var current = parseFloat(document.getElementById("pic0000").style.opacity);
-		current = current + speed;
-		document.getElementById('pic0000').style.opacity = current;
-		if (current < 1) {
-			setTimeout(function(){fadeIn0000();},1);
-		} 
-	}
-
-
-
 
 
 	document.onkeydown = function(event) {
-		if(event.key == "a"){fadeOutOne();}
-		if(event.key == "b"){fadeOutTwo();}
-		if(event.key == "c"){fadeOutThree();}
-		if(event.key == "d"){fadeOutFour();}
-		if(event.key == "e"){fadeOutFive();}
-		if(event.key == "f"){fadeOutSix();}
-		if(event.key == "g"){fadeOutSeven();}
-		if(event.key == "h"){fadeOutEight();}
-		if(event.key == "i"){fadeOutNine();}
-		if(event.key == "j"){fadeOutTen();}
-		if(event.key == "k"){fadeOut1ten();}
-		if(event.key == "l"){fadeOut2ten();}
-		if(event.key == "m"){fadeOut3ten();}
-		if(event.key == "6"){fadeOut4ten();}
-		if(event.key == "o"){fadeOut5ten();}
-		if(event.key == "8"){fadeOut6ten();}
-		if(event.key == "q"){fadeOut7ten();}
-		if(event.key == "r"){fadeOut8ten();}
-		if(event.key == "s"){fadeOut9ten();}
-		if(event.key == "t"){fadeOut2ten0();}
-		if(event.key == "u"){fadeOut2ten1();}
-		if(event.key == "-"){fadeOut2ten2();}
-		if(event.key == "w"){fadeOut2ten3();}
-		if(event.key == "x"){fadeOut2ten4();}
-		if(event.key == "y"){fadeOut2ten5();}
-		if(event.key == "9"){fadeOut2ten6();}
-		if(event.key == ","){fadeOut111();}
-		if(event.key == "."){fadeOut222();}
-		if(event.key == "/"){fadeOut333();}
-		if(event.key == "4"){fadeOut444();}
-		if(event.key == "5"){fadeOut555();}
-		if(event.key == "n"){fadeOut666();}
-		if(event.key == "2"){fadeOut777();}
-		if(event.key == "p"){fadeOut888();}
-		if(event.key == "z"){fadeOut999();}
-		if(event.key == "0"){fadeOut000();}
-		if(event.key == "`"){fadeOut1111();}
-		if(event.key == "v"){fadeOut2222();}
-		if(event.key == "="){fadeOut3333();}
-		if(event.key == "["){fadeOut4444();}
-		if(event.key == ";"){fadeOut6666();}
-		if(event.key == "'"){fadeOut7777();}
-		if(event.key == "1"){fadeOut8888();}
-		if(event.key == "7"){fadeOut9999();}
-		if(event.key == "3"){fadeOut0000();}
-
-		
-
+		if(event.key == "2"){fadeOutOne();}
+		if(event.key == "3"){fadeOutTwo();}
+		if(event.key == "4"){fadeOutThree();}
+		if(event.key == "5"){fadeOutFour();}
+		if(event.key == "6"){fadeOutFive();}
+		if(event.key == "7"){fadeOutSix();}
+		if(event.key == "8"){fadeOutSeven();}
+		if(event.key == "9"){fadeOutEight();}
+		if(event.key == "0"){fadeOutNine();}
+		if(event.key == "q"){fadeOutTen();}
+		if(event.key == "w"){fadeOut1ten();}
+		if(event.key == "e"){fadeOut2ten();}
+		if(event.key == "r"){fadeOut3ten();}
+		if(event.key == "t"){fadeOut4ten();}
+		if(event.key == "y"){fadeOut5ten();}
+		if(event.key == "u"){fadeOut6ten();}
+		if(event.key == "i"){fadeOut7ten();}
+		if(event.key == "o"){fadeOut8ten();}
+		if(event.key == "a"){fadeOut9ten();}
+		if(event.key == "s"){fadeOut2ten0();}
+		if(event.key == "d"){fadeOut2ten1();}
+		if(event.key == "f"){fadeOut2ten2();}
+		if(event.key == "g"){fadeOut2ten3();}
+		if(event.key == "h"){fadeOut2ten4();}
+		if(event.key == "j"){fadeOut2ten5();}
+		if(event.key == "k"){fadeOut2ten6();}
+		if(event.key == "l"){fadeOut111();}
+		if(event.key == "z"){fadeOut222();}
+		if(event.key == "x"){fadeOut333();}
+		if(event.key == "c"){fadeOut444();}
+		if(event.key == "v"){fadeOut555();}
+		if(event.key == "b"){fadeOut666();}
+		if(event.key == "n"){fadeOut777();}
+		if(event.key == "m"){fadeOut888();}
+		if(event.key == ","){fadeOut999();}
+		if(event.key == "."){fadeOut000();}
 
 
 
 	}
 
 
-
-
-
-
-	
 
 
 </script>
